@@ -22,4 +22,8 @@ class AnnotationsTestTests: XCTestCase {
     func testExample() throws {
         XCTAssertEqual(1, 2)
     }
+
+    func testAnotherExample() throws {
+        XCTAssertFalse(true)
+    }
 }
