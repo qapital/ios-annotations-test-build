@@ -23,4 +23,3 @@ jobs:
       if: failure()
       with:
         test_result_path: TestSummaries.xml
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
