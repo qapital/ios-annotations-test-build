@@ -3,7 +3,7 @@ name: Develop CI
 on:
   push:
     branches:
-      - develop
+      - master
 
 jobs:
   build:
@@ -16,6 +16,6 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build and Test
       run: |
-        ./Buildsystem/ci/build_and_test.sh
+        fastlane test
       env:
         GITHUB_TOKEN: ${{ secrets.iOSDependenciesToken }}
