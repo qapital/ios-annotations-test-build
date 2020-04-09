@@ -25,3 +25,4 @@ jobs:
         test_result_path: TestSummaries.xml
         token: ${{ secrets.GITHUB_TOKEN }}
         commit_sha: ${{ github.sha }}
+        check_name: "build"
