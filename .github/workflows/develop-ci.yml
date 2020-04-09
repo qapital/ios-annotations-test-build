@@ -19,3 +19,6 @@ jobs:
         fastlane test
       env:
         GITHUB_TOKEN: ${{ secrets.iOSDependenciesToken }}
+    - uses: qapital/junit-to-check-annotations@master
+      with:
+        test_result_path: TestSummaries.xml
