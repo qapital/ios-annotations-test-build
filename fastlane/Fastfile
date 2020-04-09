@@ -21,8 +21,10 @@ platform :ios do
     scan(scheme: "AnnotationsTest",
          device: "iPhone 11",
          output_types: "",
+         fail_build: false,
          xcargs: "-resultBundlePath ./TestSummaries.xcresult")
+
+    trainer(output_directory: ".",
+            fail_build: true)
   end
 end
-
-
