@@ -1,0 +1,21 @@
+name: Develop CI
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  build:
+
+    runs-on: [self-hosted, macos]
+
+    steps:
+    - name: Build Machine
+      run: hostname
+    - uses: actions/checkout@v2
+    - name: Build and Test
+      run: |
+        ./Buildsystem/ci/build_and_test.sh
+      env:
+        GITHUB_TOKEN: ${{ secrets.iOSDependenciesToken }}
