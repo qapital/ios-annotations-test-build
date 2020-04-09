@@ -20,5 +20,6 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.iOSDependenciesToken }}
     - uses: qapital/junit-to-check-annotations@master
+      if: failure()
       with:
         test_result_path: TestSummaries.xml
