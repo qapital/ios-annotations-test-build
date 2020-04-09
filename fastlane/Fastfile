@@ -24,3 +24,4 @@ platform :ios do
          xcargs: "-resultBundlePath ./TestSummaries.xcresult")
   end
 end
+
